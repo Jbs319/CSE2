@@ -36,18 +36,27 @@ double taxPercent=0.06;
 
 //total cost of socks
 double totalSockCost$ = nSocks * sockCost$;
+//tax of socks
+double socksTax$ = totalSockCost$ * taxPercent;
 //total cost of glasses
 double totalGlassesCost$ = nGlasses * glassCost$;
+//tax of glasses
+double glassesTax$ = totalGlassesCost$ * taxPercent;
 //total cost of envelopes
 double totalEnvelopeCost$ = nEnvelopes * envelopeCost$;
+//tax of envelopes
+double envelopesTax$ = totalEnvelopeCost$ *taxPercent;
 //total cost of all items pre-tax
 double totalCostPreTax$ = totalSockCost$ + totalEnvelopeCost$ + totalGlassesCost$;
 //final cost
 double finalCost$ = (totalCostPreTax$ * taxPercent) + totalCostPreTax$;
 
 System.out.println("The total cost of socks was " + totalSockCost$);
+System.out.println("The tax of the socks was " + socksTax$);
 System.out.println("The total cost of glasses was " + totalGlassesCost$);
+System.out.println("The tax of the glasses was " + glassesTax$);
 System.out.println("The total cost of envelopes was " + totalEnvelopeCost$);
+System.out.println("The tax of the envelopes was " + envelopesTax$);
 System.out.println("The total cost of all items before tax was " + totalCostPreTax$);
 System.out.println("The total cost of the purchase with tax was " + finalCost$);
 
